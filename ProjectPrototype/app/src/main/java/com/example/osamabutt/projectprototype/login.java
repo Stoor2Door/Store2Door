@@ -1,6 +1,8 @@
 package com.example.osamabutt.projectprototype;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -52,6 +54,14 @@ public class login extends AppCompatActivity {
 
                 phoneE=phoneEmail.getText().toString();
                 pass=password.getText().toString();
+
+
+                ProductCollectionFragment fragment = new ProductCollectionFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.main_recyclerview_place_holder,fragment);
+                fragmentTransaction.commit();
+
 
                 Toast toast = Toast.makeText(getApplicationContext(), "LogIn Successfull", Toast.LENGTH_SHORT);
                 toast.show();
