@@ -1,5 +1,6 @@
 package com.example.osamabutt.projectprototype;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,15 +11,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import static com.example.osamabutt.projectprototype.MainActivity.data;
+import static com.example.osamabutt.projectprototype.MainActivity.path;
+
 /**
  * Created by syed_ on 1/13/2018.
  */
+
 
 public class ProductCollectionFragment extends Fragment
 {
     //if we want to use staggered layout then following variable will be uncommented
     //private StaggeredGridLayoutManager gaggeredGridLayoutManager;
     private GridLayoutManager gridLayoutManager;
+
+
 
     @Nullable
     @Override
@@ -45,7 +52,7 @@ public class ProductCollectionFragment extends Fragment
 
 
         // what data we want to show at recycler view
-        ProductCollectionAdapter adapter = new ProductCollectionAdapter(FruitData.fruits,FruitData.path);
+        ProductCollectionAdapter adapter = new ProductCollectionAdapter(data,path);
         recyclerView.setAdapter(adapter);
 
         //for animation

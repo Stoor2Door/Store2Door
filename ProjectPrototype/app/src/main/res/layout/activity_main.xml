@@ -66,11 +66,20 @@
         android:id="@+id/signup"
         android:backgroundTint="#00000000"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_container">
+
+    </FrameLayout>
+
+
 
 
 
 
 </LinearLayout>
+
     <android.support.design.widget.NavigationView
         app:headerLayout="@layout/header"
         android:layout_height="match_parent"
@@ -79,7 +88,8 @@
         app:itemTextColor="@color/darkgray"
         app:itemIconTint="@color/darkgray"
         app:menu="@menu/drawermenu"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        android:id = "@+id/navigationView">
 
 
     </android.support.design.widget.NavigationView>
