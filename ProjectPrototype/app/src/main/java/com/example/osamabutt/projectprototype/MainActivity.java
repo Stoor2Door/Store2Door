@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity
                         ProductCollectionFragment fragment = new ProductCollectionFragment();
                         FragmentManager fragmentManager = getFragmentManager();
                         fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container,fragment);
+                        fragmentTransaction.replace(R.id.main_recyclerview_place_holder,fragment);
                         fragmentTransaction.commit();
                         item.setChecked(true);
-                        mDrawerlayout.closeDrawer(true);
+                        mDrawerlayout.closeDrawers();
                         break;
 
                         case R.id.fruits:
@@ -79,9 +79,10 @@ public class MainActivity extends AppCompatActivity
                             fragment = new ProductCollectionFragment();
                             fragmentManager = getFragmentManager();
                         fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container,fragment);
+                        fragmentTransaction.replace(R.id.main_recyclerview_place_holder,fragment);
                         fragmentTransaction.commit();
                             item.setChecked(true);
+                            mDrawerlayout.closeDrawers();
                             break;
 
 
@@ -92,9 +93,10 @@ public class MainActivity extends AppCompatActivity
                             fragment = new ProductCollectionFragment();
                             fragmentManager = getFragmentManager();
                         fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container,fragment);
+                        fragmentTransaction.replace(R.id.main_recyclerview_place_holder,fragment);
                         fragmentTransaction.commit();
                             item.setChecked(true);
+                            mDrawerlayout.closeDrawers();
                             break;
 
 
